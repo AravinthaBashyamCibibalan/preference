@@ -56,6 +56,10 @@ app.listen(process.env.port || 4000, () => {
   });
 });
 
+router.get('/sample', (req, res) => {
+ res.send('ok checked');
+});
+
 router.use(require('./tokenChecker')); // token checker is required after login only
 // GET call
 router.get('/fetchdata', (req, res) => {
